@@ -4,12 +4,12 @@
 
 using namespace std;
 
-void Ordina(Pila<int> *L);
+Pila<int> Ordina(Pila<int> *L);
 
 int main(int argc, char *argv[])
 {
     
-    Pila <int> pippo(10),y;
+    Pila <int> pippo,y;
     bool x;
     int i, add;
     
@@ -22,22 +22,21 @@ int main(int argc, char *argv[])
             pippo.inPila(add);
             }
             
-      Ordina(&y);
+      y = Ordina(&pippo);
          
      
       cout << "Stampa della pila: " << endl;
       pippo.stampaPila();
 
       cout << "testa della pila: " << pippo.leggiPila()<< endl; 
-      
-  
+
     
     system("PAUSE");
     return EXIT_SUCCESS;
 }
 
 //funzione ordinamento crescente (dal più piccolo al più grande)
-void Ordina(Pila<int> *L)
+Pila<int> Ordina(Pila<int> *L)
     {
        Pila<int> x;         
        int y,z;
@@ -52,4 +51,6 @@ void Ordina(Pila<int> *L)
                  else
                  x.inPila(z);            
              }
+
+             return x;
     } 
