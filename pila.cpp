@@ -5,12 +5,6 @@
   using namespace std;
     
   
-  template <class tipoelem> 
-    Pila<tipoelem>::Pila() {
-    	maxlung = 20;
-    	creaPila();
-    };
-
 	template <class tipoelem> 
     Pila<tipoelem>::Pila(int dim) {
     	maxlung = dim;
@@ -33,10 +27,10 @@
     bool Pila<tipoelem>::PilaVuota() {
     	 bool risp;
     	 
-    	 if (testa == -1)
-    	    risp = true;
-    	 else 
- 	  	 risp = false;
+    	 if (testa == -1) risp = true;
+        
+    	 else risp = false;
+         
 			
 		return risp;	    
     };
@@ -50,6 +44,7 @@
     
     template <class tipoelem> 
     void Pila<tipoelem>::inPila(tipoelem p) {
+        cout << p << endl;
     	 if (testa < maxlung - 1) {
 		     testa++;
 		     VET[testa] = p;
@@ -65,7 +60,6 @@
     template <class tipoelem> 
     void Pila<tipoelem>::stampaPila() {
        stampa();
-       invertiPila();
     };
     
     template <class tipoelem>
@@ -82,18 +76,5 @@
     };   
     
 
-    template <class tipoelem>
-    void Pila<tipoelem>::invertiPila()
-    {
-        tipoelem Elemento;
-        if (!PilaVuota())   {
-              Elemento = leggiPila();
-        
-		      fuoriPila();
-		 
-	          invertiPila();
-		      inPila(Elemento);
-         }  
-    };  
     
     

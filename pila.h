@@ -26,7 +26,6 @@
             tipoelem *VET;
             int testa, maxlung;
             void stampa();    
-            void invertiPila();
     };
     
   
