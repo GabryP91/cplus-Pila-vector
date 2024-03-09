@@ -30,6 +30,11 @@ int main(int argc, char *argv[])
 
       cout << "testa della pila: " << pippo.leggiPila()<< endl; 
 
+      cout << "Stampa della seconda pila: " << endl;
+      y.stampaPila();
+
+      cout << "testa della seconda pila: " << y.leggiPila()<< endl; 
+
     
     system("PAUSE");
     return EXIT_SUCCESS;
